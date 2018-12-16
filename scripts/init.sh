@@ -1,18 +1,18 @@
 #!/bin/bash
 
+source `dirname $0`/config.sh
+
 echo "** Running VPSB startup scripts **"
 
-CPIN="/opt/source/bb.org-overlays/tools/beaglebone-universal-io/config-pin"
+echo "Setting AUX1 to out and low"
+$CPIN $VPSB_AUX1 low
 
-echo "Setting P9_27 (AUX1) to out and low"
-$CPIN P9_27 low
-
-echo "Setting P8_39 (AUX2) to out and low"
-$CPIN P8_39 low
+echo "Setting AUX2 to out and low"
+$CPIN $VPSB_AUX2 low
 
 
-echo "Setting P8_40 (ENABLE) to out and low"
-$CPIN P8_40 low
+echo "Setting ENABLE to out and low"
+$CPIN $VPSB_ENABLE low
 
 echo "** VPSB startup script finished **"
 

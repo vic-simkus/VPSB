@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "** Running VPSB startup scriptsi **"
+echo "** Running VPSB startup scripts **"
 
 CPIN="/opt/source/bb.org-overlays/tools/beaglebone-universal-io/config-pin"
 

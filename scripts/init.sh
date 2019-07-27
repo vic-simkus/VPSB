@@ -14,6 +14,12 @@ $CPIN $VPSB_AUX2 low
 echo "Setting ENABLE to out and low"
 $CPIN $VPSB_ENABLE low
 
+for p in $VPSB_SERIAL_PINS; 
+do
+	echo "Setting $p to UART mode."
+	$CPIN $p uart
+done
+
 echo "** VPSB startup script finished **"
 
 exit 0 

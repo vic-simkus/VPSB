@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source `dirname $0`/config.sh
+me=$(readlink --canonicalize --no-newline $BASH_SOURCE)
+my_dir=$(dirname $me)
+
+echo "I am: $me"
+source $my_dir/config.sh
 
 echo "** Running VPSB startup scripts **"
 
